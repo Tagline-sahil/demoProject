@@ -1,14 +1,29 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useState } from "react";
+import { View, StyleSheet } from "react-native";
+import { Dropdown } from "react-native-paper-dropdown";
 
-const App = () => {
+const genderList = [
+  { label: "Male", value: "male" },
+  { label: "Female", value: "female" },
+  { label: "Other", value: "other" },
+];
+
+export default function App() {
+  const [gender, setGender] = useState("");
+
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>App</Text>
+    <View style={styles.container}>
+      <Dropdown
+        label="Gender"
+        placeholder="Select Gender"
+        options={genderList}
+        value={gender}
+        onSelect={setGender}
+      />
     </View>
-  )
+  );
 }
 
-export default App
-
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: { flex: 1, justifyContent: "center", margin: 16 },
+});
