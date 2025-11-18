@@ -1,15 +1,24 @@
-import React from "react";
-import { View } from "react-native";
-import DropdownList from "./src/component/DropdownList";
-import SocketIO from "./src/component/SocketIO";
+import React from 'react';
+import DropdownList from './src/component/dropdownList/DropdownList';
+import SocketIO from './src/component/SocketIO';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import CustomTextInput from './src/component/CustomTextInput';
+import BottomNavExample from './src/component/BottomNavExample';
+import { Provider as PaperProvider } from 'react-native-paper';
+import Animatedd from './src/component/animation/Animated';
 
 export default function App() {
-
   return (
-    <View style={{ flex: 1 }}>
-      {/* <DropdownList /> */}
-      <SocketIO />
-    </View>
+    <SafeAreaProvider>
+      <SafeAreaView style={{ flex: 1 }}>
+        <PaperProvider>
+          {/* <DropdownList /> */}
+          {/* <SocketIO /> */}
+          {/* <CustomTextInput /> */}
+          {/* <BottomNavExample /> */}
+          <Animatedd />
+        </PaperProvider>
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
-
