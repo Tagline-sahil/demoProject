@@ -12,14 +12,14 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
-        <PaperProvider>
-          {/* <DropdownList /> */}
-          {/* <SocketIO /> */}
-          {/* <CustomTextInput /> */}
-          {/* <BottomNavExample /> */}
-          {/* <AnimatedTest /> */}
-          <ReanimatedTest />
-        </PaperProvider>
+        {/* <PaperProvider> */}
+        {/* <DropdownList /> */}
+        {/* <SocketIO /> */}
+        {/* <CustomTextInput /> */}
+        {/* <BottomNavExample /> */}
+        {/* <AnimatedTest /> */}
+        <ReanimatedTest />
+        {/* </PaperProvider> */}
       </SafeAreaView>
     </SafeAreaProvider>
   );
