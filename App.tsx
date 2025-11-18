@@ -5,7 +5,8 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import CustomTextInput from './src/component/CustomTextInput';
 import BottomNavExample from './src/component/BottomNavExample';
 import { Provider as PaperProvider } from 'react-native-paper';
-import Animatedd from './src/component/animation/Animated';
+import AnimatedTest from './src/component/animation/AnimatedTest';
+import ReanimatedTest from './src/component/animation/ReanimatedTest';
 
 export default function App() {
   return (
@@ -16,7 +17,8 @@ export default function App() {
           {/* <SocketIO /> */}
           {/* <CustomTextInput /> */}
           {/* <BottomNavExample /> */}
-          <Animatedd />
+          {/* <AnimatedTest /> */}
+          <ReanimatedTest />
         </PaperProvider>
       </SafeAreaView>
     </SafeAreaProvider>
