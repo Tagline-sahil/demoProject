@@ -7,19 +7,25 @@ import BottomNavExample from './src/component/BottomNavExample';
 import { Provider as PaperProvider } from 'react-native-paper';
 import AnimatedTest from './src/component/animation/AnimatedTest';
 import ReanimatedTest from './src/component/animation/ReanimatedTest';
+import { Provider } from 'react-redux';
+import { store } from './src/redux/store';
+import UserDetailsScreen from './src/screen/UserDetailsScreen';
 
 export default function App() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
-        {/* <PaperProvider> */}
-        {/* <DropdownList /> */}
-        {/* <SocketIO /> */}
-        {/* <CustomTextInput /> */}
-        {/* <BottomNavExample /> */}
-        {/* <AnimatedTest /> */}
-        <ReanimatedTest />
-        {/* </PaperProvider> */}
+        <PaperProvider>
+          <Provider store={store}>
+            {/* <DropdownList /> */}
+            {/* <SocketIO /> */}
+            {/* <CustomTextInput /> */}
+            {/* <BottomNavExample /> */}
+            {/* <AnimatedTest /> */}
+            {/* <ReanimatedTest /> */}
+            <UserDetailsScreen />
+          </Provider>
+        </PaperProvider>
       </SafeAreaView>
     </SafeAreaProvider>
   );
